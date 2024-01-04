@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>A Cup Of Tea Is A  Cup Of Peace</h1>
+
+<div class="row">
+    {% for t in t %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ t.image}}" class="Card-image-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ t.name }}</h5>
+              <p class="card-text">₹{{ t.price }}</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}    
+{% endblock %}
